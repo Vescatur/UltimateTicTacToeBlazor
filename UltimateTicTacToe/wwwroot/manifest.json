@@ -1,0 +1,8 @@
+{
+  "name": "UltimateTicTacToe",
+  "short_name": "UltimateTicTacToe",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#03173d"
+}
