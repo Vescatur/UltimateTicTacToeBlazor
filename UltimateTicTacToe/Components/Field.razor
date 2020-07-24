@@ -1,0 +1,21 @@
+﻿@using UltimateTicTacToe.Models.Game
+@using UltimateTicTacToe.State
+@inject SuperFieldState SuperFieldState
+
+<div class="small_field field">
+    @for (int y = 0; y < 3; y++)
+    {
+        @for (int x = 0; x < 3; x++)
+        {
+            var squareX = x;
+            var squareY = y;
+            <div class="small_cell @GetSquareCssClasses(x,y)" @onclick="() => OnClick(squareX,squareY)">
+                @if (HighlightMove && HighlightMovePosition == new Position(x,y))
+                {
+                    <div class='animator'></div>
+                }
+            </div>
+        }
+    }
+
+</div>

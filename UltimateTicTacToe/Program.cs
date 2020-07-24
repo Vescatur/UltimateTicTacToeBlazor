@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using UltimateTicTacToe.State;
 
 namespace UltimateTicTacToe
 {
@@ -18,6 +19,7 @@ namespace UltimateTicTacToe
             builder.RootComponents.Add<App>("app");
 
             builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            builder.Services.AddScoped<SuperFieldState>();
 
             await builder.Build().RunAsync();
         }

@@ -1,0 +1,21 @@
+﻿@using UltimateTicTacToe.Models.Game
+
+@code {
+    [Parameter]
+    public FieldState Winner { get; set; } = FieldState.None;
+}
+
+<p>
+    @if (Winner == FieldState.Draw)
+    {
+        @:Draw
+    }
+    else if (Winner == FieldState.X)
+    {
+        @:Player X Won
+    }
+    else if (Winner == FieldState.O)
+    {
+        @:Player O Won
+    }
+</p>
