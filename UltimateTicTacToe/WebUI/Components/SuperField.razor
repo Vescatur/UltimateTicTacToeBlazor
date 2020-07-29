@@ -1,0 +1,14 @@
+﻿@using UltimateTicTacToe.WebUI.Models.Game
+@using UltimateTicTacToe.WebUI.State
+
+<div class="big_field field" id="big_field">
+    @for (int y = 0; y < 3; y++)
+    {
+        @for (int x = 0; x < 3; x++)
+        {
+            <div class="big_cell @GetFieldCssClasses(x,y)">
+                <Field FieldPosition="new Position(x,y)" FieldModel="SuperFieldModel.Fields[y][x]" Interactable="Interactable(x,y)" HighlightMove="HighlightMove(x,y)" HighlightMovePosition="SuperFieldModel.HighlightMovePosition.Square" />
+            </div>
+        }
+    }
+</div>

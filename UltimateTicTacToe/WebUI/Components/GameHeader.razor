@@ -1,0 +1,31 @@
+﻿@using UltimateTicTacToe.WebUI.Models.Game
+@code {
+    [Parameter]
+    public SquareState PlayersTurn { get; set; } = SquareState.Empty;
+}
+
+<div class="header">
+    <h1 id="uttt_title" style="display: none;">Ultimate Tic Tac Toe</h1>
+    <h1 id="win_title">
+        <span></span>
+    </h1>
+    <h1 id="names_title" style="display: block;">
+        @if (PlayersTurn == SquareState.O)
+        {
+            <span id="p1name">player O</span>
+        }
+        else
+        {
+            <span>player O</span>
+        }
+        &nbsp;vs&nbsp;
+        @if (PlayersTurn == SquareState.X)
+        {
+            <span id="p2name">player X</span>
+        }
+        else
+        {
+            <span>player X</span>
+        }
+    </h1>
+</div>

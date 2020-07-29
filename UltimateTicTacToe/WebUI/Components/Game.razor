@@ -1,0 +1,10 @@
+﻿@using UltimateTicTacToe.WebUI.Models.Game
+@using UltimateTicTacToe.WebUI.State
+@inject SuperFieldState SuperFieldState
+
+
+<GameHeader PlayersTurn="SuperFieldModel.PlayersTurn" />
+
+<SuperField SuperFieldModel="SuperFieldModel" />
+
+<GameFooter Winner="SuperFieldModel.Winner" />
